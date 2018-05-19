@@ -1,11 +1,36 @@
 import random
 import time
+
 import actors
+
+ascii_art = '''
+   ▄▄▄▄▄   █ ▄▄  ▄███▄   ▄███▄     ▄▀  █     ▄███▄   
+  █     ▀▄ █   █ █▀   ▀  █▀   ▀  ▄▀    █     █▀   ▀  
+▄  ▀▀▀▀▄   █▀▀▀  ██▄▄    ██▄▄    █ ▀▄  █     ██▄▄    
+ ▀▄▄▄▄▀    █     █▄   ▄▀ █▄   ▄▀ █   █ ███▄  █▄   ▄▀ 
+            █    ▀███▀   ▀███▀    ███      ▀ ▀███▀   
+             ▀                                       
+                                                     
+            ▄████  ██   █▀▄▀█ ▄█ █    ▀▄    ▄        
+            █▀   ▀ █ █  █ █ █ ██ █      █  █         
+            █▀▀    █▄▄█ █ ▄ █ ██ █       ▀█          
+            █      █  █ █   █ ▐█ ███▄    █           
+             █        █    █   ▐     ▀ ▄▀            
+              ▀      █    ▀                          
+                    ▀                                
+                ███   █▄▄▄▄ ██     ▄ ▄   █           
+                █  █  █  ▄▀ █ █   █   █  █           
+                █ ▀ ▄ █▀▀▌  █▄▄█ █ ▄   █ █           
+                █  ▄▀ █  █  █  █ █  █  █ ███▄        
+                ███     █      █  █ █ █      ▀       
+                       ▀      █    ▀ ▀               
+                             ▀                      
+'''
 
 
 def print_header():
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    print('                      FAMILY BRAWL')
+    print(ascii_art)
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print('')
 
@@ -24,7 +49,7 @@ def game_loop(name: str):
     player = actors.Hero(name, random.randint(3, 20), 'nerf gun')
     lives = 3
 
-    print('\n{} was supposed to do homework, '
+    print('\n{} was supposed to do homework,\n'
           'but went out front to play with friends instead.'
           .format(name))
     while True:

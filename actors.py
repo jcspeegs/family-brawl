@@ -9,11 +9,12 @@ class Creature:
         self.attack_type = attack_type
 
     def __repr__(self):
-        return "Creature: {} of level {} with attack_type: {}"\
+        return "Creature: {} of level {} with attack_type: {}" \
             .format(self.name, self.level, self.attack_type)
 
     def get_defensive_roll(self):
         return self.level * random.randint(1, 12)
+
 
 class Hero(Creature):
     def defeat(self, target):
@@ -46,13 +47,10 @@ class Parent(Creature):
         self.level = level
         self.attack_type = attack_type
 
-
-
     def get_defensive_roll(self):
-
         # Use this assignment if you pass mood string in initializer
         # moody_mod = getattr(self.mood_val, self.mood)
 
         # Use this assignment if you pass index in initializer
         moody_mod = self.mood_val[self.mood]
-        return super().get_defensive_roll()*moody_mod
+        return super().get_defensive_roll() * moody_mod
