@@ -41,6 +41,7 @@ class Parent(Creature):
     def __init__(self, name: str, level: int, attack_type: str, mood):
         self.mood = mood
         self.mood_val = collections.namedtuple('moods', ['angry', 'tired', 'happy'])(5, 3, 1)
+        # self.mood must be int
         self.name = '{} {}'.format(self.mood_val._fields[self.mood], name)
         self.level = level
         self.attack_type = attack_type
